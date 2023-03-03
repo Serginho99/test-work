@@ -35,9 +35,11 @@ export default function UserAlbums({ open, handleClose, albums }) {
       <Fade in={open}>
         <Box sx={style}>
           <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-            {albums?.map(item => (
-              <li key={item.id}>{item.title}</li>
-            ))}
+            <ul>
+              {albums?.map(item => (
+                <li key={item.id}>{item.title}</li>
+              ))}
+            </ul>
           </Typography>
         </Box>
       </Fade>
