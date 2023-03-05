@@ -28,9 +28,9 @@ export default function Users() {
   }, []);
 
   async function fetchAlbums(id) {
-    setOpen(true);
     try {
       const res = await dispatch(userAlbums(id));
+      setOpen(true);
       setAlbums([...res.payload]);
     } catch (error) {
       console.log(error.message);
